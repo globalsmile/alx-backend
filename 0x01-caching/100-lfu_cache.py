@@ -13,6 +13,8 @@ class LFUCache(BaseCaching):
 
     def put(self, key, item):
         """ Assign to the dictionary, LFU algorithm """
+        if key is None or item is None:
+            return
         if key in self.lru_cache:
             del self.lru_cache[key]
         if len(self.lru_cache) > BaseCaching.MAX_ITEMS - 1:
