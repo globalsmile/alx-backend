@@ -2,7 +2,7 @@
 """ Basic Flask app, Basic Babel setup, Get locale from request,
     Parametrize templates, Force locale with URL parameter, Mock logging in """
 from flask import Flask, render_template, request, g
-from flask_babel import Babel, gettext
+from flask_babel import Babel
 
 app = Flask(__name__)
 babel = Babel(app)
